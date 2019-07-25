@@ -1,0 +1,31 @@
+footer {
+  .footer--wrapper {
+    background-color: var(--red);
+    padding: var(--space--lg);
+    margin: 0;
+    display: flex;
+    flex-flow: nowrap;
+
+    .col {
+      flex: 1;
+    }
+
+    .col:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    a {
+      text-decoration: none;
+      margin-right: var(--space--sm);
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}

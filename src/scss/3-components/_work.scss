@@ -1,0 +1,30 @@
+section.work {
+  @include sectionContainer;
+
+  .work-info--wrapper {
+    position: absolute;
+    top: 0;
+  }
+
+  .work-item-number {
+    display: inline-block;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 0;
+    left: calc(var(--space--lg) * -1)
+  }
+
+  .work--link {
+    text-decoration: none;
+    font-weight: 700;
+    text-align: left;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  li {
+    padding: 0 var(--space--lg);
+    margin-bottom: calc(var(--space--lg) + var(--space--md));
+    position: relative;
+  }
+}

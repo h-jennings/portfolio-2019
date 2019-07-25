@@ -1,0 +1,11 @@
+:root {
+  --space-unit: 11px;
+  --space--xsm: calc(var(--space-unit) * 0.5); // 5.5px
+  --space--base: calc(var(--space-unit) * 1); // 11px
+  --space--sm: calc(var(--space-unit) * 1.5); // 16.5
+  --space--md: calc(var(--space-unit) * 2.5); // 27.5
+  --space--lg: calc(var(--space-unit) * 4); // 44
+  --space--xl: calc(var(--space-unit) * 6.5); // 71.5
+  --space--xxl: calc(var(--space-unit) * 10.5); // 115.5
+  --space--super: calc(var(--space-unit) * 17); // 187
+}

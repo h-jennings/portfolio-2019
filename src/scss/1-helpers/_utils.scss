@@ -1,0 +1,11 @@
+.red {
+  color: var(--red);
+}
+
+
+@mixin sectionContainer {
+  z-index: 2;
+  padding: var(--space--lg) 0;
+  height: 100%;
+  min-height: 100vh;
+}

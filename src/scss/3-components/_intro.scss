@@ -1,0 +1,28 @@
+section.intro {
+  @include sectionContainer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+
+  .intro--wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .section--line {
+    width: var(--space--xsm);
+    min-width: 5px;
+    background-color: var(--red);
+  }
+
+  .content--wrapper {
+    padding: 0 var(--space--lg);
+    max-width: 728px;
+  }
+
+  p {
+    font-size: var(--txt--md);
+    line-height: 1.33;
+  }
+}
