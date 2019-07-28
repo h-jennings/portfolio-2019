@@ -2,12 +2,12 @@ import React from 'react';
 import Intro from './Intro';
 import Work from './Work';
 import Footer from './Footer';
-import DivTest from './DivTest';
+import Logo from './Logo';
 
 export default function Home() {
   return (
     <main className="home">
-      <DivTest />
+      <Logo />
       <Intro />
       <Work />
       <Footer />

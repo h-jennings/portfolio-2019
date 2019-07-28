@@ -8,13 +8,13 @@ export default function Footer() {
           <p>This website was designed and developed by me.</p>
         </div>
         <div className="col">
-          <a href="#">
+          <a href="https://github.com/h-jennings" target="_blank" rel="noopener noreferrer">
             Github.
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/h_jennings/" target="_blank" rel="noopener noreferrer">
             Instagram.
           </a>
-          <a href="#">
+          <a href="https://twitter.com/jennings_hunter" target="_blank" rel="noopener noreferrer">
             Twitter.
           </a>
         </div>

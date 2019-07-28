@@ -1,39 +1,50 @@
 import React from 'react';
-import WorkItem from './WorkItem';
+import WorkItemContent from './WorkItemContent';
 
 const workItems = [
   {
     name: 'Beagles',
     subHeadline: 'Producer/DJ',
-    linkHref: 'https://blonded-player.netlify.com/',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    linkHref: 'https://www.beaglesmusic.com/',
   },
   {
     name: 'Katy Pentz',
     subHeadline: 'Privacy Professional',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
     linkHref: 'https://www.katypentz.com/',
   },
   {
     name: 'Blonded Player',
     subHeadline: 'Side Project',
-    linkHref: 'https://www.beaglesmusic.com/',
+    bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+    linkHref: 'https://blonded-player.netlify.com/',
   },
 ];
 
 export default function Work() {
   return (
     <section className="work">
+      <h1 className="work-section--title">
+          Selected Work
+        <span className="red">.</span>
+      </h1>
+
       <ul>
-        {workItems.map((item, index) => {
-          const numb = index;
-          return (
-            <li key={item.name}>
-              <div className="work-item-number">
-                { numb + 1 }
-              </div>
-              <WorkItem linkHref={item.linkHref} name={item.name} />
-            </li>
-          );
-        })}
+        {workItems.map((item, index) => (
+          <li
+            className="work_item"
+            key={item.name}
+          >
+            <WorkItemContent
+              number={index + 1}
+              linkHref={item.linkHref}
+              bio={item.bio}
+              name={item.name}
+              subHeadline={item.subHeadline}
+            />
+          </li>
+        ))}
       </ul>
     </section>
   );

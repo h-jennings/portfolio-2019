@@ -1,0 +1,14 @@
+main.home {
+  .logo {
+    position: fixed;
+    left: var(--space--xl);
+    top: var(--space--xl);
+    max-width: var(--space--xxl);
+    height: auto;
+
+    @include for-laptop-down {
+      left: var(--space--lg);
+      top: var(--space--lg);
+    }
+  }
+}

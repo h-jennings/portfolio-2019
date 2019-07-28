@@ -1,5 +1,25 @@
 section.work {
   @include sectionContainer;
+  position: relative;
+
+  .work-section--title {
+    position: absolute;
+    margin: 0;
+    left: calc(var(--space--xl) * -1);
+    top: calc(var(--space--lg) + 15px);
+    transform-origin: top left;
+    transform: rotate(90deg);
+    font-size: var(--txt--lg);
+
+    span {
+      padding-left: 4px;
+    }
+
+    @include for-laptop-down {
+      font-size: var(--txt--md);
+      left: calc(var(--space--lg) * -1);
+    }
+  }
 
   .work-info--wrapper {
     position: absolute;
@@ -10,8 +30,14 @@ section.work {
     display: inline-block;
     transform: rotate(90deg);
     position: absolute;
-    top: 0;
-    left: calc(var(--space--lg) * -1)
+    top: 15px;
+    letter-spacing: 2px;
+    right: var(--space--sm)
+  }
+
+  .link--wrapper {
+    padding: 0 var(--space--lg);
+    overflow: hidden;
   }
 
   .work--link {
@@ -20,11 +46,55 @@ section.work {
     text-align: left;
     line-height: 1.2;
     margin-bottom: 0;
+    display: block;
+
+    &:hover {
+      color: gray;
+    }
   }
 
+
   li {
-    padding: 0 var(--space--lg);
     margin-bottom: calc(var(--space--lg) + var(--space--md));
     position: relative;
+
+    @include for-laptop-down {
+      margin-bottom: 6vw;
+    }
+  }
+
+  aside {
+    width: 25vw;
+    position: absolute;
+    top: 15px;
+    right: -50%;
+
+
+    h2 {
+      font-weight: 700;
+      line-height: 1;
+      text-align: left;
+      padding: 0 var(--space--lg);
+      font-size: var(--txt--md);
+      margin-bottom: var(--space--sm);
+    }
+
+    p {
+      padding: 0 var(--space--lg);
+      margin: 0;
+      line-height: 1.5;
+      max-width: 350px;
+    }
+
+    @include for-laptop-down {
+      h2 {
+        font-size: 1.8vw;
+      }
+
+      p {
+        font-size: 1vw;
+        line-height: 2;
+      }
+    }
   }
 }
