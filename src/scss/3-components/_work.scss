@@ -2,13 +2,18 @@ section.work {
   @include sectionContainer;
   position: relative;
 
+  .work-section-title--wrapper {
+    width: 25%;
+    position: relative;
+  }
+
   .work-section--title {
-    position: absolute;
     margin: 0;
-    left: calc(var(--space--xl) * -1);
-    top: calc(var(--space--lg) + 15px);
-    transform-origin: top left;
-    transform: rotate(90deg);
+    position: absolute;
+    top: var(--space--lg);
+    right: var(--space--lg);
+    transform: rotate(90deg) translateX(100%) translateY(0%);
+    transform-origin: top right;
     font-size: var(--txt--lg);
 
     span {
@@ -17,8 +22,11 @@ section.work {
 
     @include for-laptop-down {
       font-size: var(--txt--md);
-      left: calc(var(--space--lg) * -1);
     }
+  }
+
+  .link-content--wrapper {
+    display: flex;
   }
 
   .work-info--wrapper {
@@ -32,12 +40,13 @@ section.work {
     position: absolute;
     top: 15px;
     letter-spacing: 2px;
-    right: var(--space--sm)
+    left: calc(var(--space--lg) * -1);
   }
 
   .link--wrapper {
     padding: 0 var(--space--lg);
     overflow: hidden;
+    width: 66.75%;
   }
 
   .work--link {
@@ -53,34 +62,32 @@ section.work {
     }
   }
 
+  ul {
+    flex: 1;
+    padding: var(--space--lg) 0 0 0;
+  }
 
   li {
-    margin-bottom: calc(var(--space--lg) + var(--space--md));
+    margin-bottom: var(--space--xl);
     position: relative;
-
-    @include for-laptop-down {
-      margin-bottom: 6vw;
-    }
   }
 
   aside {
-    width: 25vw;
-    position: absolute;
-    top: 15px;
-    right: -50%;
-
+    flex: 1;
+    position: relative;
+    padding-top: 15px;
 
     h2 {
       font-weight: 700;
       line-height: 1;
       text-align: left;
-      padding: 0 var(--space--lg);
+      padding: 0 var(--space--md);
       font-size: var(--txt--md);
       margin-bottom: var(--space--sm);
     }
 
     p {
-      padding: 0 var(--space--lg);
+      padding: 0 var(--space--md);
       margin: 0;
       line-height: 1.5;
       max-width: 350px;

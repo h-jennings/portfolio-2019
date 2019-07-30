@@ -1,10 +1,14 @@
 footer {
+  display: flex;
+  justify-content: center;
+
   .footer--wrapper {
     background-color: var(--red);
     padding: var(--space--lg);
     margin: 0;
     display: flex;
     flex-flow: nowrap;
+    width: 50%;
 
     .col {
       flex: 1;

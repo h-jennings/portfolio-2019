@@ -4,7 +4,6 @@ export default function Intro() {
   return (
     <section className="intro">
       <div className="intro--wrapper">
-        <div className="section--line" />
         <div className="content--wrapper">
           <h1>
           Hi there,

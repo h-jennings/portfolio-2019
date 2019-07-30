@@ -25,10 +25,13 @@ const workItems = [
 export default function Work() {
   return (
     <section className="work">
-      <h1 className="work-section--title">
+      <div className="work-section-title--wrapper">
+        <h1 className="work-section--title">
           Selected Work
-        <span className="red">.</span>
-      </h1>
+          <span className="red">.</span>
+        </h1>
+      </div>
+
 
       <ul>
         {workItems.map((item, index) => (
@@ -46,6 +49,7 @@ export default function Work() {
           </li>
         ))}
       </ul>
+
     </section>
   );
 }
