@@ -8,7 +8,20 @@ footer {
     margin: 0;
     display: flex;
     flex-flow: nowrap;
+    align-items: center;
     width: 50%;
+
+    @include for-laptop-down {
+      padding: var(--space--md);
+    }
+
+    @include for-tablet-down {
+      width: 76%;
+    }
+
+    @include for-phone-only {
+      width: 100%;
+    }
 
     .col {
       flex: 1;
@@ -17,10 +30,19 @@ footer {
     .col:nth-child(2) {
       display: flex;
       justify-content: flex-end;
+
+      @include for-phone-only {
+        flex-flow: column nowrap;
+        align-items: flex-end;
+      }
     }
 
     p {
       margin: 0;
+
+      @include for-laptop-down {
+        font-size: var(--txt--sm);
+      }
     }
 
     a {
@@ -28,6 +50,15 @@ footer {
       margin-right: var(--space--sm);
 
       &:last-of-type {
+        margin: 0;
+      }
+
+      @include for-laptop-down {
+        font-size: var(--txt--sm);
+      }
+
+      @include for-phone-only {
+        display: block;
         margin: 0;
       }
     }

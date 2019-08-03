@@ -2,15 +2,30 @@ section.work {
   @include sectionContainer;
   position: relative;
 
+  @include for-phone-only {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
   .work-section-title--wrapper {
     width: 25%;
     position: relative;
+
+    @include for-tablet-down {
+      width: 12%;
+    }
+
+    @include for-phone-only {
+      width: 76%;
+      padding: 0 var(--space--sm);
+      margin-bottom: var(--space--lg);
+    }
   }
 
   .work-section--title {
     margin: 0;
     position: absolute;
-    top: var(--space--lg);
+    top: 15px;
     right: var(--space--lg);
     transform: rotate(90deg) translateX(100%) translateY(0%);
     transform-origin: top right;
@@ -22,6 +37,18 @@ section.work {
 
     @include for-laptop-down {
       font-size: var(--txt--md);
+      right: var(--space--md);
+    }
+
+    @include for-tablet-down {
+      right: var(--space--sm);
+      width: 200px;
+    }
+
+    @include for-phone-only {
+      position: static;
+      transform: none;
+      width: 100%;
     }
   }
 
@@ -41,12 +68,29 @@ section.work {
     top: 15px;
     letter-spacing: 2px;
     left: calc(var(--space--lg) * -1);
+
+    @include for-laptop-down {
+      font-size: 1.15vw;
+      left: calc(var(--space--md) * -1);
+    }
   }
 
   .link--wrapper {
     padding: 0 var(--space--lg);
     overflow: hidden;
     width: 66.75%;
+
+    @include for-laptop-down {
+      padding: 0 var(--space--md);
+    }
+
+    @include for-tablet-down {
+      width: 100%;
+    }
+
+    @include for-phone-only {
+      padding: 0 var(--space--sm);
+    }
   }
 
   .work--link {
@@ -56,20 +100,41 @@ section.work {
     line-height: 1.2;
     margin-bottom: 0;
     display: block;
+    transition: all 0.3s ease-in-out;
+
+    @include for-laptop-down {
+      font-size: 6vw;
+    }
+
+    @include for-tablet-down {
+      font-size: 9vw;
+    }
+
+    @include for-phone-only {
+      font-size: 13vw;
+    }
 
     &:hover {
-      color: gray;
+      color: var(--red);
     }
   }
 
   ul {
     flex: 1;
-    padding: var(--space--lg) 0 0 0;
+
+    @include for-tablet-down {
+      width: 76%;
+      flex: unset;
+    }
   }
 
   li {
     margin-bottom: var(--space--xl);
     position: relative;
+
+    @include for-tablet-down {
+      margin-bottom: var(--space--md);
+    }
   }
 
   aside {
@@ -88,19 +153,24 @@ section.work {
 
     p {
       padding: 0 var(--space--md);
-      margin: 0;
       line-height: 1.5;
       max-width: 350px;
+
+      &:last-of-type {
+        margin: 0;
+      }
     }
 
     @include for-laptop-down {
       h2 {
         font-size: 1.8vw;
+        padding: 0 var(--space--sm);
       }
 
       p {
-        font-size: 1vw;
-        line-height: 2;
+        font-size: 1.15vw;
+        line-height: 1.5;
+        padding: 0 var(--space--sm);
       }
     }
   }

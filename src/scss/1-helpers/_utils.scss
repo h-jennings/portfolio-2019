@@ -2,11 +2,24 @@
   color: var(--red);
 }
 
+.bolded {
+  font-weight: 700;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
 
 @mixin sectionContainer {
   height: 100%;
   display: flex;
   min-height: 100vh;
+  padding: var(--space--xl) 0;
+
+  @include for-tablet-down {
+    padding: var(--space--lg) 0;
+  }
 }
 
 @mixin for-phone-only {
@@ -16,7 +29,7 @@
 }
 
 @mixin for-tablet-down {
-  @media (max-width: 900px) {
+  @media (max-width: 1000px) {
     @content;
   }
 }

@@ -5,7 +5,9 @@ export default function Footer() {
     <footer>
       <div className="footer--wrapper">
         <div className="col">
-          <p>This website was designed and developed by me.</p>
+          <p>
+            This website was built with React. Framer Motion for animation. All projects are available on Github.
+          </p>
         </div>
         <div className="col">
           <a href="https://github.com/h-jennings" target="_blank" rel="noopener noreferrer">

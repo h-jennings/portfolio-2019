@@ -1,3 +1,5 @@
+/* eslint-disable react/forbid-prop-types */
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
@@ -9,10 +11,8 @@ const fadeInAnimation = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.3,
-      ease: 'easeInOut',
-      duration: 0.8,
-      type: 'tween',
+      delay: 0.5,
+      type: 'spring',
       stiffness: 100,
       damping: 40,
     },
@@ -23,6 +23,7 @@ export default function WorkItemInfo(
   {
     subHeadline,
     bio,
+    techArr,
     isVisible,
     number,
   },
@@ -45,6 +46,26 @@ export default function WorkItemInfo(
       <p>
         {bio}
       </p>
+      <p>
+        <span className="bolded"> Technologies: </span>
+        {techArr.map((item, index, arr) => {
+          const { name, link } = item.tech;
+          return (
+            <React.Fragment key={name}>
+              <a className="no-underline" rel="noopener noreferrer" target="_blank" href={link}>
+                {name}
+              </a>
+              <React.Fragment>
+                {
+                  arr.length - 1 === index
+                    ? '.'
+                    : ', '
+                }
+              </React.Fragment>
+            </React.Fragment>
+          );
+        })}
+      </p>
     </motion.aside>
   );
 }
@@ -53,5 +74,6 @@ WorkItemInfo.propTypes = {
   subHeadline: PropTypes.string.isRequired,
   bio: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
+  techArr: PropTypes.array.isRequired,
   isVisible: PropTypes.bool.isRequired,
 };

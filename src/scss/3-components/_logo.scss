@@ -10,5 +10,15 @@ main.home {
       left: var(--space--lg);
       top: var(--space--lg);
     }
+
+    @include for-tablet-down {
+      top: var(--space--md);
+      right: 12%;
+      opacity: 0.3;
+      z-index: -1;
+      width: 90px;
+      height: auto;
+      left: unset;
+    }
   }
 }

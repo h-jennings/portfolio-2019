@@ -6,11 +6,33 @@ section.intro {
   .intro--wrapper {
     width: 50%;
     overflow: hidden;
+
+    @include for-tablet-down {
+      width: 76%;
+    }
   }
 
   .content--wrapper {
     padding: 0 var(--space--lg);
     max-width: 728px;
+
+    @include for-tablet-down {
+      padding: 0 var(--space--md);
+    }
+
+    @include for-phone-only {
+      padding: 0 var(--space--sm);
+    }
+  }
+
+  h1 {
+    @include for-laptop-down {
+      font-size: 4.25vw;
+    }
+
+    @include for-tablet-down {
+      font-size: var(--txt--lg);
+    }
   }
 
   p {
@@ -19,7 +41,10 @@ section.intro {
 
     @include for-laptop-down {
       font-size: var(--txt--base);
+    }
 
+    @include for-phone-only {
+      font-size: 14px;
     }
   }
 }

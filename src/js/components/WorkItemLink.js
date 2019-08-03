@@ -11,8 +11,6 @@ const linkAnimation = {
     opacity: 1,
     x: '0%',
     transition: {
-      ease: 'easeInOut',
-      duration: 0.5,
       type: 'spring',
       stiffness: 200,
       damping: 40,
@@ -50,5 +48,5 @@ export default function WorkItemLink(
 WorkItemLink.propTypes = {
   name: PropTypes.string.isRequired,
   linkHref: PropTypes.string.isRequired,
-  isVisible: PropTypes.bool,
+  isVisible: PropTypes.bool.isRequired,
 };
