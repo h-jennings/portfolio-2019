@@ -11,7 +11,7 @@ export default class WorkItemContent extends React.Component {
     this.options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.50,
+      threshold: 0.30,
     };
     this.state = {
       isVisible: false,

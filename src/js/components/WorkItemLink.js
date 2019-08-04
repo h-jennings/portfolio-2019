@@ -11,9 +11,8 @@ const linkAnimation = {
     opacity: 1,
     x: '0%',
     transition: {
-      type: 'spring',
-      stiffness: 200,
-      damping: 40,
+      duration: 0.3,
+      type: 'tween',
     },
   },
 };
