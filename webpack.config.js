@@ -2,6 +2,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const configureFontLoader = () => ({
   test: /\.(ttf|eot|woff2?)$/i,
@@ -90,6 +91,14 @@ module.exports = {
       configureBabelLoader(),
       configureImageLoader(),
       configureSassLoader(),
+    ],
+  },
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        test: /\.js$/,
+        exclude: /node_modules/,
+      }),
     ],
   },
   plugins: [
