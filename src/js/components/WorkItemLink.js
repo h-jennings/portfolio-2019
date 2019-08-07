@@ -13,6 +13,7 @@ const linkAnimation = {
     transition: {
       duration: 0.3,
       type: 'tween',
+      ease: 'easeInOut',
     },
   },
 };
@@ -25,22 +26,21 @@ export default function WorkItemLink(
   },
 ) {
   return (
-    <React.Fragment>
-      <div
-        className="link--wrapper"
+    <div
+      className="link--wrapper"
+    >
+      <motion.a
+        className="txt--xxl work--link"
+        rel="noopener noreferrer"
+        target="_blank"
+        href={linkHref}
+        initial="hidden"
+        animate={isVisible ? 'visible' : 'hidden'}
+        variants={linkAnimation}
       >
-        <motion.a
-          className="txt--xxl work--link"
-          rel="noopener noreferrer"
-          target="_blank"
-          href={linkHref}
-          animate={isVisible ? 'visible' : 'hidden'}
-          variants={linkAnimation}
-        >
-          {name}
-        </motion.a>
-      </div>
-    </React.Fragment>
+        {name}
+      </motion.a>
+    </div>
   );
 }
 

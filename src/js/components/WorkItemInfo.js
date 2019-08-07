@@ -11,7 +11,7 @@ const fadeInAnimation = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 1,
+      delay: 0.8,
       // * Might want to change this back to `spring` once they fix it
       type: 'tween',
     },
@@ -33,7 +33,6 @@ export default function WorkItemInfo(
       animate={isVisible ? 'visible' : 'hidden'}
     >
       <motion.div
-        animate={isVisible ? 'visible' : 'hidden'}
         className="work-item-number"
         variants={fadeInAnimation}
       >
