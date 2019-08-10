@@ -77,6 +77,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
+    publicPath: '/',
   },
   mode: 'development',
   devtool: 'inline-source-map',
@@ -84,6 +85,7 @@ module.exports = {
     contentBase: './dist',
     port: 2468,
     open: false,
+    historyApiFallback: true,
   },
   module: {
     rules: [

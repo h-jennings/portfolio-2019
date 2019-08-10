@@ -11,7 +11,7 @@ const fadeInAnimation = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.8,
+      delay: 0.5,
       // * Might want to change this back to `spring` once they fix it
       type: 'tween',
     },

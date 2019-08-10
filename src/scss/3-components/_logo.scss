@@ -1,10 +1,11 @@
-main.home {
-  .logo {
+a {
+  &.logo {
     position: fixed;
     left: var(--space--xl);
     top: var(--space--xl);
     max-width: var(--space--xxl);
     height: auto;
+    z-index: 4;
 
     @include for-laptop-down {
       left: var(--space--lg);
@@ -19,6 +20,10 @@ main.home {
       width: 90px;
       height: auto;
       left: unset;
+    }
+
+    img {
+      display: block;
     }
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import logoImg from '../../assets/images/logo.svg';
 
@@ -8,8 +9,8 @@ export default function Logo() {
   const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
 
   return (
-    <React.Fragment>
-      <motion.img className="logo" src={logoImg} style={{ rotate }} />
-    </React.Fragment>
+    <Link to="/" className="logo">
+      <motion.img src={logoImg} style={{ rotate }} />
+    </Link>
   );
 }
