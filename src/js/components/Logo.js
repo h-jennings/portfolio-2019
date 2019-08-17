@@ -6,7 +6,7 @@ import logoImg from '../../assets/images/logo.svg';
 
 export default function Logo() {
   const { scrollYProgress } = useViewportScroll();
-  const rotate = useTransform(scrollYProgress, [0, 1], [0, 360]);
+  const rotate = useTransform(scrollYProgress, [0, 1], [0, -360]);
 
   return (
     <Link to="/" className="logo">
