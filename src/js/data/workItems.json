@@ -37,6 +37,43 @@
       "linkHref": "https://www.beaglesmusic.com/"
     },
     {
+      "name": "Ayo! News",
+      "subHeadline": "Side Project",
+      "bio": "Used React, a News API, and serverless functions to create a mock news app that dynamically pulls in the top news of the day from various publications.",
+      "techArr": [{
+          "tech": {
+            "name": "React",
+            "link": "https://reactjs.org/"
+          }
+        },
+        {
+          "tech": {
+            "name": "Framer Motion",
+            "link": "https://www.framer.com/motion/"
+          }
+        },
+        {
+          "tech": {
+            "name": "Webpack",
+            "link": "https://webpack.js.org/"
+          }
+        },
+        {
+          "tech": {
+            "name": "AWS Lambda",
+            "link": "https://aws.amazon.com/lambda/"
+          }
+        },
+        {
+          "tech": {
+            "name": "Sass",
+            "link": "https://sass-lang.com/"
+          }
+        }
+      ],
+      "linkHref": "https://ayo-news.netlify.com/"
+    },
+    {
       "name": "Katy Pentz",
       "subHeadline": "Privacy Professional",
       "bio": "Commisioned résumé site for Washington D.C. based Privacy Professional, Katy Pentz.",
